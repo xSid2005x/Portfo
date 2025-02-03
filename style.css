@@ -1,0 +1,339 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #1e1e2f;
+  color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* LINKS */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* HEADER / NAVBAR */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #1e1e2f;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Orbitron", sans-serif;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links li a {
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links li a:hover {
+  color: #2dcecc;
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-title {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.section-title h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* HERO (VANTA) */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* The background is created by Vanta in script.js */
+}
+.hero-content {
+  position: relative;
+  z-index: 1; /* ensures the text is above the Vanta canvas */
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: "Orbitron", sans-serif;
+}
+.hero-content h2 {
+  font-size: 1.8rem;
+  color: #0077ff;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+.cta-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #9b51e0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.cta-btn:hover {
+  background-color: #7d41b2;
+}
+
+/* ABOUT */
+.about-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+.highlights {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+.highlight h3 {
+  color: #2dcecc;
+  font-size: 2rem;
+  text-align: center;
+}
+.highlight p {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* SKILLS */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.skill {
+  background-color: #29293d;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.skill:hover {
+  transform: translateY(-5px);
+}
+.skill-info h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+.skill-info p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+.progress-bar {
+  background-color: #454560;
+  border-radius: 5px;
+  height: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+.progress-fill {
+  background-color: #2dcecc;
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+}
+
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2rem;
+}
+.project-card {
+  background-color: #29293d;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+.project-card img {
+  width: 100%;
+  display: block;
+}
+.project-content {
+  padding: 1rem;
+}
+.project-content h3 {
+  margin-bottom: 0.5rem;
+}
+.project-content p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.tech-stack {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #2dcecc;
+  margin-bottom: 0.5rem;
+}
+.project-link {
+  color: #0077ff;
+  font-weight: 500;
+}
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* EXPERIENCE (TIMELINE) */
+.experience {
+  max-width: 900px;
+}
+.timeline {
+  position: relative;
+  margin-top: 2rem;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #0077ff;
+}
+.timeline-item {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 60px;
+}
+.timeline-date {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: #2dcecc;
+}
+.timeline-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.timeline-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* CONTACT */
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+.form-group {
+  margin-bottom: 1.2rem;
+}
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #000;
+}
+button[type="submit"] {
+  background-color: #0077ff;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background-color: #005fcc;
+}
+.social-links {
+  text-align: center;
+}
+.social-links a {
+  color: #2dcecc;
+  margin: 0 0.5rem;
+  font-weight: 500;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #1e1e2f;
+  border-top: 1px solid #2c2c3f;
+}
+.footer p {
+  font-size: 0.9rem;
+}
+
+/* 3D Tilt Hover: we rely on VanillaTilt, but you can style .tilt further if you want. */
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .highlights {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .timeline::before {
+    left: 10px;
+  }
+  .timeline-item {
+    padding-left: 40px;
+  }
+  .timeline-date {
+    left: 0;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content h2 {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Siddharth Raj | AI & Data Engineering Portfolio</title>
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/ScrollTrigger.min.js"></script>
+
+  <!-- THREE.js (required by Vanta.js) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <!-- Vanta.js (NET effect) -->
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+
+  <!-- VanillaTilt.js (for 3D tilt on project cards) -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+
+</head>
+<body>
+  <!-- HEADER / NAVBAR -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Siddharth Raj</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION with VANTA BACKGROUND -->
+  <section id="hero" class="hero">
+    <!-- The background is handled by Vanta.js in script.js -->
+    <div class="hero-content">
+      <h1>I'm Siddharth Raj</h1>
+      <h2>AI & Data Engineering Enthusiast</h2>
+      <p>Transforming data into intelligent insights</p>
+      <button class="cta-btn"
+        onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+        Explore My Work
+      </button>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <div class="section-title">
+      <h2>About Me</h2>
+    </div>
+    <div class="about-content">
+      <p>
+        Hello! I’m <strong>YourName</strong>, a passionate AI & Data Engineering student dedicated to
+        building end-to-end machine learning solutions that turn raw data into actionable insights.
+        My interests lie in large-scale data pipelines, cloud-based model deployment, and cutting-edge
+        research in deep learning. When I'm not coding, I enjoy exploring the latest AI breakthroughs,
+        collaborating on open-source projects, or experimenting with IoT innovations.
+      </p>
+      <div class="highlights">
+        <div class="highlight">
+          <h3>5+</h3>
+          <p>Machine Learning Projects</p>
+        </div>
+        <div class="highlight">
+          <h3>2</h3>
+          <p>Published Papers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="skills">
+    <div class="section-title">
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-container">
+      <!-- Row 1 -->
+      <div class="skill">
+        <div class="skill-info">
+          <h3>Python</h3>
+          <p>Proficiency in data manipulation, scripting, and building ML models.</p>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-skill-level="90"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-info">
+          <h3>TensorFlow</h3>
+          <p>Experience with deep learning architectures for computer vision and NLP.</p>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-skill-level="85"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-info">
+          <h3>PyTorch</h3>
+          <p>Hands-on with custom neural network building and optimization.</p>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-skill-level="80"></div>
+        </div>
+      </div>
+      <!-- Row 2 -->
+      <div class="skill">
+        <div class="skill-info">
+          <h3>Apache Spark</h3>
+          <p>Building scalable data pipelines and distributed ETL processes.</p>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-skill-level="75"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-info">
+          <h3>SQL & NoSQL</h3>
+          <p>Designing efficient queries and managing big data with multiple DB engines.</p>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-skill-level="80"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-info">
+          <h3>UI/UX & Front-End</h3>
+          <p>Crafting intuitive interfaces and smooth user experiences.</p>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-skill-level="70"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="section-title">
+      <h2>Projects</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card tilt">
+        <img src="https://via.placeholder.com/400x250" alt="Pet Finder" />
+        <div class="project-content">
+          <h3>Pet Finder</h3>
+          <p>Developed a mobile-friendly web app that matches adoptable pets with owners using recommendation algorithms.</p>
+          <div class="tech-stack">React • Node.js • MongoDB</div>
+          <a href="#" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+      </div>
+      <div class="project-card tilt">
+        <img src="https://via.placeholder.com/400x250" alt="Football Video Analytics" />
+        <div class="project-content">
+          <h3>Football Video Analytics</h3>
+          <p>Applied computer vision techniques to track player movements & performance metrics from match footage.</p>
+          <div class="tech-stack">OpenCV • Python • Docker</div>
+          <a href="#" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+      </div>
+      <div class="project-card tilt">
+        <img src="https://via.placeholder.com/400x250" alt="Emotion Detection" />
+        <div class="project-content">
+          <h3>Emotion Detection for Dementia Patients</h3>
+          <p>Leveraged facial emotion recognition models to monitor and support patient well-being in real-time.</p>
+          <div class="tech-stack">PyTorch • Computer Vision • Healthcare</div>
+          <a href="#" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+      </div>
+      <div class="project-card tilt">
+        <img src="https://via.placeholder.com/400x250" alt="Mushroom Cultivation" />
+        <div class="project-content">
+          <h3>Data-driven Mushroom Cultivation</h3>
+          <p>Utilizing IoT sensors and data analytics to optimize humidity, light, and temperature for large-scale mushroom production.</p>
+          <div class="tech-stack">Python • IoT • SQL</div>
+          <a href="#" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+      </div>
+      <div class="project-card tilt">
+        <img src="https://via.placeholder.com/400x250" alt="Plantae Irrigation" />
+        <div class="project-content">
+          <h3>Project Plantae Irrigation</h3>
+          <p>Automated irrigation system using real-time soil moisture data and ML to reduce water usage in farming.</p>
+          <div class="tech-stack">Python • ML • Sensors</div>
+          <a href="#" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+      </div>
+      <div class="project-card tilt">
+        <img src="https://via.placeholder.com/400x250" alt="UI/UX Web Design" />
+        <div class="project-content">
+          <h3>UI/UX Web Design</h3>
+          <p>Crafted user-friendly, responsive interfaces for e-commerce platforms and corporate websites.</p>
+          <div class="tech-stack">HTML • CSS • JavaScript</div>
+          <a href="#" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="experience">
+    <div class="section-title">
+      <h2>Work Experience</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2023</div>
+        <div class="timeline-content">
+          <h3>RPA Developer Intern @ Monetary Authority of Singapore</h3>
+          <p>
+            Integrating AI and RPA for Automation: Leading the first AI-RPA integration in MAS, leveraging Large Language Models and Prompt Engineering to automate two key processes: one summarizing articles from Factiva and delivering them in user-friendly templates, and another curating articles from Factiva and Lexis Nexis APIs for QA deployment on an intranet server. Once fully implemented, this AI-RPA integration is projected to save approximately 52 hours annually, significantly improving operational efficiency.<br>
+
+            Scalable AI-RPA Framework: Designed reusable Blue Prism objects and processes, enabling other developers to reference or extend my framework for additional automation tasks that combine AI and RPA, facilitating faster deployment of similar solutions.<br>
+            
+            Website Development and Management: Built an RPA Wiki on Microsoft SharePoint, centralizing resources and documentation for streamlined RPA operations.<br>
+            
+            Organized Automation Summit: Led an event with hundreds of participants, featuring industry leaders from Prudential, NUHS, and Blue Prism, fostering industry-wide discussions on automation advancements.<br>
+            
+            RPA Developer Training & Act On Tech – RPA Edition: Organized and hosted training sessions for 20–30 participants, providing foundational knowledge on RPA & Blue Prism, equipping them with the skills to build automation solutions.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2022</div>
+        <div class="timeline-content">
+          <h3>Hilton Singapore (Formula 1 Singapore)</h3>
+          <p>
+            - Led a team of 6 to address guest inquiries, ensuring seamless operations in a fast-paced environment<br>
+            - Provided customer service to VIP guests during the Formula 1 event<br>
+            - Managed VIP suite amenities for an optimal guest experience<br>
+            - Received positive feedback, contributing to the success of the Formula 1 event
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2021</div>
+        <div class="timeline-content">
+          <h3>SATS Ltd</h3>
+          <p>
+            - Oversaw inventory management and quality checks on shipments <br>
+            - Efficiently organized inventory, collaborated with cross-functional teams<br>
+            - Streamlined operations, ensuring accurate stock levels, and reducing turnaround times
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <div class="section-title">
+      <h2>Contact</h2>
+    </div>
+    <div class="contact-content">
+      <form class="contact-form" onsubmit="return false;">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="How can I help you?" required></textarea>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+      <div class="social-links">
+        <p>Or connect with me on:</p>
+        <a href="#" target="_blank">GitHub</a> |
+        <a href="#" target="_blank">LinkedIn</a> |
+        <a href="#" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 YourName – All Rights Reserved.</p>
+  </footer>
+
+  <!-- MAIN SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
