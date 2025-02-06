@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* BODY */
 body {
   font-family: "Roboto", sans-serif;
   background-color: #1e1e2f;
@@ -74,11 +75,10 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* The background is created by Vanta in script.js */
 }
 .hero-content {
   position: relative;
-  z-index: 1; /* ensures the text is above the Vanta canvas */
+  z-index: 1;
   text-align: center;
   background: rgba(0, 0, 0, 0.5);
   padding: 2rem;
@@ -118,21 +118,6 @@ section {
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.8;
-}
-.highlights {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin-top: 2rem;
-}
-.highlight h3 {
-  color: #2dcecc;
-  font-size: 2rem;
-  text-align: center;
-}
-.highlight p {
-  text-align: center;
-  margin-top: 0.5rem;
 }
 
 /* SKILLS */
@@ -188,9 +173,8 @@ section {
   flex-direction: column;
   transition: transform 0.3s;
 }
-.project-card img {
-  width: 100%;
-  display: block;
+.project-card:hover {
+  transform: translateY(-5px);
 }
 .project-content {
   padding: 1rem;
@@ -217,12 +201,11 @@ section {
 }
 
 /* EXPERIENCE (TIMELINE) */
-.experience {
-  max-width: 900px;
-}
+/* UPDATED TIMELINE STYLES */
 .timeline {
   position: relative;
   margin-top: 2rem;
+  padding-left: 40px;
 }
 .timeline::before {
   content: "";
@@ -231,26 +214,32 @@ section {
   top: 0;
   width: 4px;
   height: 100%;
-  background-color: #0077ff;
+  background: linear-gradient(to bottom, #0077ff, #2dcecc);
 }
 .timeline-item {
   position: relative;
   margin: 2rem 0;
   padding-left: 60px;
+  opacity: 0;
+  transform: translateX(-30px);
 }
 .timeline-date {
   position: absolute;
   left: 0;
   top: 0;
-  font-weight: bold;
+  background: #1e1e2f;
   color: #2dcecc;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
-.timeline-content h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-}
-.timeline-content p {
-  font-size: 0.95rem;
+.timeline-content {
+  background: #29293d;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
   line-height: 1.6;
 }
 
@@ -313,27 +302,15 @@ button[type="submit"]:hover {
   font-size: 0.9rem;
 }
 
-/* 3D Tilt Hover: we rely on VanillaTilt, but you can style .tilt further if you want. */
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .highlights {
-    flex-direction: column;
-    gap: 1rem;
+  .section-title h2 {
+    font-size: 1.8rem;
   }
-  .timeline::before {
-    left: 10px;
+  .timeline {
+    padding-left: 20px;
   }
   .timeline-item {
     padding-left: 40px;
-  }
-  .timeline-date {
-    left: 0;
-  }
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  .hero-content h2 {
-    font-size: 1.4rem;
   }
 }
