@@ -19,7 +19,6 @@
 
   <!-- VanillaTilt.js (for 3D tilt on project cards) -->
   <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
-
 </head>
 <body>
   <!-- HEADER / NAVBAR -->
@@ -44,8 +43,7 @@
       <h1>I'm Siddharth Raj</h1>
       <h2>AI & Data Engineering Enthusiast</h2>
       <p>Transforming data into intelligent insights</p>
-      <button class="cta-btn"
-        onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+      <button class="cta-btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
         Explore My Work
       </button>
     </div>
@@ -58,22 +56,8 @@
     </div>
     <div class="about-content">
       <p>
-        Hello! I’m <strong>YourName</strong>, a passionate AI & Data Engineering student dedicated to
-        building end-to-end machine learning solutions that turn raw data into actionable insights.
-        My interests lie in large-scale data pipelines, cloud-based model deployment, and cutting-edge
-        research in deep learning. When I'm not coding, I enjoy exploring the latest AI breakthroughs,
-        collaborating on open-source projects, or experimenting with IoT innovations.
+        Hello! I’m <strong>Siddharth</strong>, a passionate AI & Data Engineering student dedicated to building end-to-end machine learning solutions that turn raw data into actionable insights. My interests lie in large-scale data pipelines, cloud-based model deployment, and cutting-edge research in deep learning. When I'm not coding, I enjoy exploring the latest AI breakthroughs, collaborating on open-source projects, or experimenting with IoT innovations.
       </p>
-      <div class="highlights">
-        <div class="highlight">
-          <h3>5+</h3>
-          <p>Machine Learning Projects</p>
-        </div>
-        <div class="highlight">
-          <h3>2</h3>
-          <p>Published Papers</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -142,110 +126,130 @@
     </div>
   </section>
 
+  <!-- PROJECTS SECTION -->
   <section id="projects" class="projects">
     <div class="section-title">
       <h2>Projects</h2>
     </div>
     <div class="projects-grid">
+      <!-- Football Video Analytics -->
       <div class="project-card tilt">
-        <img src="https://via.placeholder.com/400x250" alt="Pet Finder" />
-        <div class="project-content">
-          <h3>Pet Finder</h3>
-          <p>Developed a mobile-friendly web app that matches adoptable pets with owners using recommendation algorithms.</p>
-          <div class="tech-stack">React • Node.js • MongoDB</div>
-          <a href="#" target="_blank" class="project-link">View on GitHub</a>
-        </div>
-      </div>
-      <div class="project-card tilt">
-        <img src="https://via.placeholder.com/400x250" alt="Football Video Analytics" />
         <div class="project-content">
           <h3>Football Video Analytics</h3>
-          <p>Applied computer vision techniques to track player movements & performance metrics from match footage.</p>
+          <p>
+            Applied computer vision techniques to track player movements and performance metrics from match footage.
+          </p>
           <div class="tech-stack">OpenCV • Python • Docker</div>
-          <a href="#" target="_blank" class="project-link">View on GitHub</a>
+          <a href="football-video-analytics.html" class="project-link">View Details</a>
         </div>
       </div>
+      <!-- Emotion Detection -->
       <div class="project-card tilt">
-        <img src="https://via.placeholder.com/400x250" alt="Emotion Detection" />
         <div class="project-content">
           <h3>Emotion Detection for Dementia Patients</h3>
-          <p>Leveraged facial emotion recognition models to monitor and support patient well-being in real-time.</p>
+          <p>
+            Leveraged facial emotion recognition models to monitor and support patient well-being in real time.
+          </p>
           <div class="tech-stack">PyTorch • Computer Vision • Healthcare</div>
-          <a href="#" target="_blank" class="project-link">View on GitHub</a>
+          <a href="emotion-detection.html" class="project-link">View Details</a>
         </div>
       </div>
+      <!-- Data-driven Mushroom Cultivation -->
       <div class="project-card tilt">
-        <img src="https://via.placeholder.com/400x250" alt="Mushroom Cultivation" />
         <div class="project-content">
           <h3>Data-driven Mushroom Cultivation</h3>
-          <p>Utilizing IoT sensors and data analytics to optimize humidity, light, and temperature for large-scale mushroom production.</p>
+          <p>
+            Utilized IoT sensors and data analytics to optimize humidity, light, and temperature for large-scale production.
+          </p>
           <div class="tech-stack">Python • IoT • SQL</div>
-          <a href="#" target="_blank" class="project-link">View on GitHub</a>
+          <a href="mushroom-cultivation.html" class="project-link">View Details</a>
         </div>
       </div>
+      <!-- Project Plantae Irrigation -->
       <div class="project-card tilt">
-        <img src="https://via.placeholder.com/400x250" alt="Plantae Irrigation" />
         <div class="project-content">
           <h3>Project Plantae Irrigation</h3>
-          <p>Automated irrigation system using real-time soil moisture data and ML to reduce water usage in farming.</p>
+          <p>
+            An automated irrigation system using real-time soil moisture data and machine learning to reduce water usage.
+          </p>
           <div class="tech-stack">Python • ML • Sensors</div>
-          <a href="#" target="_blank" class="project-link">View on GitHub</a>
+          <a href="plantae-irrigation.html" class="project-link">View Details</a>
         </div>
       </div>
+      <!-- UI/UX Web Design -->
       <div class="project-card tilt">
-        <img src="https://via.placeholder.com/400x250" alt="UI/UX Web Design" />
         <div class="project-content">
           <h3>UI/UX Web Design</h3>
-          <p>Crafted user-friendly, responsive interfaces for e-commerce platforms and corporate websites.</p>
+          <p>
+            Crafted user-friendly, responsive interfaces for e-commerce platforms and corporate websites.
+          </p>
           <div class="tech-stack">HTML • CSS • JavaScript</div>
-          <a href="#" target="_blank" class="project-link">View on GitHub</a>
+          <a href="ui-ux-web-design.html" class="project-link">View Details</a>
+        </div>
+      </div>
+      <!-- AgroPulse: IoT Farm Monitoring & Automation -->
+      <div class="project-card tilt">
+        <div class="project-content">
+          <h3>AgroPulse: IoT Farm Monitoring & Automation</h3>
+          <p>
+            An innovative system leveraging IoT sensors and real-time analytics to optimize farm operations and resource management.
+          </p>
+          <div class="tech-stack">IoT • Data Analytics • Automation</div>
+          <a href="agro-pulse.html" class="project-link">View Details</a>
+        </div>
+      </div>
+      <!-- AI Solution Development (GitHub Link) -->
+      <div class="project-card tilt">
+        <div class="project-content">
+          <h3>AI Solution Development</h3>
+          <p>
+            End-to-end development of AI solutions integrating machine learning models into scalable applications.
+          </p>
+          <div class="tech-stack">Python • TensorFlow • Cloud</div>
+          <a href="https://github.com/xSid2005x/Powerpuff-Boys" target="_blank" class="project-link">View on GitHub</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- EXPERIENCE SECTION (TIMELINE) -->
   <section id="experience" class="experience">
     <div class="section-title">
       <h2>Work Experience</h2>
     </div>
     <div class="timeline">
+      <!-- Timeline Item 1 -->
       <div class="timeline-item">
-        <div class="timeline-date">2023</div>
+        <div class="timeline-date">2025</div>
         <div class="timeline-content">
           <h3>RPA Developer Intern @ Monetary Authority of Singapore</h3>
           <p>
-            Integrating AI and RPA for Automation: Leading the first AI-RPA integration in MAS, leveraging Large Language Models and Prompt Engineering to automate two key processes: one summarizing articles from Factiva and delivering them in user-friendly templates, and another curating articles from Factiva and Lexis Nexis APIs for QA deployment on an intranet server. Once fully implemented, this AI-RPA integration is projected to save approximately 52 hours annually, significantly improving operational efficiency.<br>
-
-            Scalable AI-RPA Framework: Designed reusable Blue Prism objects and processes, enabling other developers to reference or extend my framework for additional automation tasks that combine AI and RPA, facilitating faster deployment of similar solutions.<br>
-            
-            Website Development and Management: Built an RPA Wiki on Microsoft SharePoint, centralizing resources and documentation for streamlined RPA operations.<br>
-            
-            Organized Automation Summit: Led an event with hundreds of participants, featuring industry leaders from Prudential, NUHS, and Blue Prism, fostering industry-wide discussions on automation advancements.<br>
-            
-            RPA Developer Training & Act On Tech – RPA Edition: Organized and hosted training sessions for 20–30 participants, providing foundational knowledge on RPA & Blue Prism, equipping them with the skills to build automation solutions.
+            - Developed Scalable AI-RPA Solutions: First in MAS to integrate RPA with AI, automating article summarization and curation while designing reusable Blue Prism objects for faster deployment, saving approximately 52 hours annually.<br>
+            - Website Development: Created an RPA Wiki on SharePoint to centralize resources and streamline operations.<br>
+            - Led Automation Initiatives: Organized an industry summit with key leaders and conducted RPA training for 20–30 participants.
           </p>
         </div>
       </div>
+      <!-- Timeline Item 2 -->
       <div class="timeline-item">
         <div class="timeline-date">2022</div>
         <div class="timeline-content">
           <h3>Hilton Singapore (Formula 1 Singapore)</h3>
           <p>
-            - Led a team of 6 to address guest inquiries, ensuring seamless operations in a fast-paced environment<br>
-            - Provided customer service to VIP guests during the Formula 1 event<br>
-            - Managed VIP suite amenities for an optimal guest experience<br>
-            - Received positive feedback, contributing to the success of the Formula 1 event
+            - Led a team of 6 to address guest inquiries in a fast-paced environment.<br>
+            - Provided customer service to VIP guests during the Formula 1 event.<br>
+            - Managed VIP suite amenities for an optimal guest experience.
           </p>
         </div>
       </div>
+      <!-- Timeline Item 3 -->
       <div class="timeline-item">
         <div class="timeline-date">2021</div>
         <div class="timeline-content">
           <h3>SATS Ltd</h3>
           <p>
-            - Oversaw inventory management and quality checks on shipments <br>
-            - Efficiently organized inventory, collaborated with cross-functional teams<br>
-            - Streamlined operations, ensuring accurate stock levels, and reducing turnaround times
+            - Oversaw inventory management and quality checks on shipments.<br>
+            - Collaborated with cross-functional teams to streamline operations and ensure accurate stock levels.
           </p>
         </div>
       </div>
