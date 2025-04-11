@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1) Vanta.js for Hero Section
+  // Vanta Background
   if (typeof VANTA !== "undefined") {
     VANTA.NET({
       el: "#hero",
@@ -16,16 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 2) GSAP Scroll Animations for Sections (now set to re-trigger on both enter & enterBack)
+  // GSAP Animations
   gsap.registerPlugin(ScrollTrigger);
-  const sections = document.querySelectorAll("section");
-  sections.forEach((section) => {
+  document.querySelectorAll("section").forEach((section) => {
     if (section.id === "hero") return;
     gsap.from(section, {
       scrollTrigger: {
         trigger: section,
         start: "top 80%",
-        toggleActions: "restart none restart none" // re-animate every time it enters
+        toggleActions: "restart none restart none"
       },
       opacity: 0,
       y: 50,
@@ -34,65 +33,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 3) Animate Skill Progress Bars (re-trigger on every scroll into view)
-  const progressFills = document.querySelectorAll(".progress-fill");
-  progressFills.forEach((fill) => {
-    const skillLevel = fill.getAttribute("data-skill-level");
-    gsap.fromTo(fill, 
-      { width: "0%" },
-      {
-        scrollTrigger: {
-          trigger: fill,
-          start: "top 80%",
-          toggleActions: "restart none restart none"
-        },
-        width: skillLevel + "%",
-        duration: 1.5,
-        ease: "power3.out"
-      }
-    );
-  });
-
-  // 4) VanillaTilt for 3D Card Hover
-  const tiltElements = document.querySelectorAll(".tilt");
-  VanillaTilt.init(tiltElements, {
-    max: 15,
-    speed: 400,
-    glare: true,
-    "max-glare": 0.4
-  });
-
-  // 5) Animate Timeline Items (re-trigger on each scroll in)
-  gsap.utils.toArray('.timeline-item').forEach(item => {
-    gsap.fromTo(item,
-      { opacity: 0, x: -30 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: item,
-          start: "top 80%",
-          toggleActions: "restart none restart none"
-        }
-      }
-    );
-  });
-
-  // 6) Theme Toggle Functionality
+  // Theme Toggle
   const themeToggle = document.getElementById('theme-toggle');
   const themeIcon = document.getElementById('theme-icon');
   themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('light-mode');
-    // Rotate the icon for a smooth effect
-    if(document.body.classList.contains('light-mode')) {
+    if (document.body.classList.contains('light-mode')) {
       themeIcon.style.transform = 'rotate(180deg)';
-      // Switch icon to sun (light mode indicator)
-      themeIcon.src = 'https://img.icons8.com/ios-filled/50/ffffff/sun.png';
+      themeIcon.src = 'https://img.icons8.com/ios-filled/50/000000/sun--v1.png';
     } else {
       themeIcon.style.transform = 'rotate(0deg)';
-      // Switch icon back to moon (dark mode indicator)
       themeIcon.src = 'https://img.icons8.com/ios-filled/50/ffffff/moon-symbol.png';
     }
   });
