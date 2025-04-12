@@ -25,7 +25,7 @@ a {
 #theme-toggle {
   position: fixed;
   top: 20px;
-  right: 80px; /* Increase this so it doesn’t overlap the nav links */
+  right: 600px;
   z-index: 1000;
   background: none;
   border: none;
