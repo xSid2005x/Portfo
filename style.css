@@ -25,12 +25,12 @@ a {
 #theme-toggle {
   position: fixed;
   top: 20px;
-  right: 20px;
+  right: 80px; /* Increase this so it doesn’t overlap the nav links */
+  z-index: 1000;
   background: none;
   border: none;
   outline: none;
   cursor: pointer;
-  z-index: 1000;
 }
 #theme-toggle img {
   width: 40px;
